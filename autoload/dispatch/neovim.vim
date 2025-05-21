@@ -165,4 +165,5 @@ function! s:JobExit(job_id, data, event) dict abort
 	endif
 	call writefile([a:data], self.tempfile . '.complete')
 	call dispatch#complete(self.tempfile)
+  execute 'copen'
 endfunction
